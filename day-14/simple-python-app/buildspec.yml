@@ -15,6 +15,8 @@ phases:
       - pip install -r day-13/simple-python-app/requirements.txt
   build:
     commands:
+      - echo "Checking Flask bind address..."
+      - grep "app.run" day-14/simple-python-app/app.py
       - echo "Running tests..."
       - cd day-13/simple-python-app/
       - echo "Building Docker image..."
